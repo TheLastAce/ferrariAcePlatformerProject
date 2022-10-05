@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +19,13 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
 
-        if(player != null)
-            transform.position = new Vector3(transform.position.x, player.transform.position.y, -10);
+        if(Player != null)
+            transform.position = new Vector3(transform.position.x, Player.transform.position.y, -10);
 
     }
     public void HandlePlayerSpawnedEvent(GameObject chosenPlayer)
     {
-        player = chosenPlayer;
+        Player = chosenPlayer;
     }
 
     public void OnDestroy()

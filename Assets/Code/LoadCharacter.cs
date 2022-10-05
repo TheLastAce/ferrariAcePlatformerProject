@@ -6,16 +6,17 @@ using System;
 
 public class LoadCharacter : MonoBehaviour
 {
-    public GameObject[] characterPrefabs;
-    public Transform spawnPoint;
+    public GameObject[] CharacterPrefabs;
+    public Transform SpawnPoint;
     public static Action<GameObject>PlayerSpawedEvent;
     //public TMP_Text label;
 
     private void Start()
     {
-        int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
-        GameObject prefab = characterPrefabs[selectedCharacter];
-        GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        int SelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
+        GameObject prefab = CharacterPrefabs[SelectedCharacter];
+        GameObject clone = Instantiate(prefab, SpawnPoint.position, Quaternion.identity);
+        clone.SetActive(true);
         PlayerSpawedEvent?.Invoke(clone);
         //label.text = prefab.name;
     }

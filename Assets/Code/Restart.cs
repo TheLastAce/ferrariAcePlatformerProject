@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Restart : MonoBehaviour
 {
-    public GameObject startPoint;
-    public GameObject player;
+    public GameObject StartPoint;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +17,11 @@ public class Restart : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
-            player.transform.position = startPoint.transform.position;
+            Player.transform.position = StartPoint.transform.position;
     }
     public void HandlePlayerSpawnedEvent(GameObject chosenPlayer)
     {
-        player = chosenPlayer;
+        Player = chosenPlayer;
     }
 
     public void OnDestroy()
