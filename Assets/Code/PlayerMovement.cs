@@ -28,11 +28,21 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
+<<<<<<< Updated upstream
             isJumping = false;
+=======
+            IsJumping = false;
+        print("You are touching the ground!");
+>>>>>>> Stashed changes
     }
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
+<<<<<<< Updated upstream
             isJumping = true;
+=======
+            IsJumping = true;
+        print("You are no longer on the ground :o");
+>>>>>>> Stashed changes
     }
 }
