@@ -5,30 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
-    public GameObject[] characters;
-    public int selectedCharacter = 0;
+    public GameObject[] Characters;
+    public int SelectedCharacter = 0;
     
 
     public void NextCharacter()
     {
-        characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (selectedCharacter + 1) % characters.Length;
-        characters[selectedCharacter].SetActive(true);
+        Characters[SelectedCharacter].SetActive(false);
+        SelectedCharacter = (SelectedCharacter + 1) % Characters.Length;
+        Characters[SelectedCharacter].SetActive(true);
     }
 
     public void PreviousCharacter()
     {
-        characters[selectedCharacter].SetActive(false);
-        selectedCharacter--;
+        Characters[SelectedCharacter].SetActive(false);
+        SelectedCharacter--;
 
-        if (selectedCharacter < 0)
-            selectedCharacter += characters.Length;
-        characters[selectedCharacter].SetActive(true);
+        if (SelectedCharacter < 0)
+            SelectedCharacter += Characters.Length;
+        Characters[SelectedCharacter].SetActive(true);
     }
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt("SelectedCharacter", SelectedCharacter);
         SceneManager.LoadScene("level1");
     }
 }

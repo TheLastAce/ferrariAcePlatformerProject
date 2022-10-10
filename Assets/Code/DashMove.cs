@@ -4,45 +4,52 @@ using UnityEngine;
 
 public class DashMove : MonoBehaviour
 {
+    PlayerMovement playerMove;
     bool canDash = true;
     bool isDashing;
     float dashingPower = 24f;
     float dashingTime = 0.2f;
     float dashingCooldown = 1f;
     public Rigidbody2D Rb;
-    public float dashDistance = 15f;
+    public float DashDistance = 15f;
     float doubleTapTime;
     KeyCode lastKeyCode;
 
     public TrailRenderer tr;
 
-   /* private IEnumerator DashTr()
+    /* private IEnumerator DashTr()
+     {
+         canDash = false;
+         isDashing = true; //you right, I am dashing---ly good looking! :D
+         Rb.gravityScale = 0f;
+         float originalGravity = Rb.gravityScale;
+
+         Rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+         tr.emitting = true;
+         yield return new WaitForSeconds(dashingTime);
+         tr.emitting = false;
+         Rb.gravityScale = originalGravity;
+         isDashing = false;
+         yield return new WaitForSeconds(dashingCooldown);
+         canDash = true;
+     }*/
+
+    public void Start()
     {
-        canDash = false;
-        isDashing = true; //you right, I am dashing---ly good looking! :D
-        Rb.gravityScale = 0f;
-        float originalGravity = Rb.gravityScale;
-        
-        Rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        tr.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
-        Rb.gravityScale = originalGravity;
-        isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-    }*/
+        playerMove = GetComponent<PlayerMovement>();
+    }
     IEnumerator Dash(float direction)
         {
+        playerMove.enabled = false;
         isDashing = true;
         Rb.velocity = new Vector2(Rb.velocity.x, 0f);
-        Rb.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+        Rb.AddForce(new Vector2(DashDistance * direction, 0f), ForceMode2D.Impulse);
         float gravity = Rb.gravityScale;
         Rb.gravityScale = 0f;
         yield return new WaitForSeconds(0.5f);
         isDashing = false;
         Rb.gravityScale = gravity;
-
+        playerMove.enabled = true;
     }
 
     private void Update()
@@ -51,6 +58,7 @@ public class DashMove : MonoBehaviour
         {
             if(doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
             {
+               // print("Double A");
                 StartCoroutine(Dash(-1f));
             }
             else
