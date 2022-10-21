@@ -1,47 +1,98 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WallJump : MonoBehaviour
 {
     public float Speed;
-    float move;
+    // float move;
+    private float jumpDirection;
 
+    PlayerMovement playerMove;
     public float WJump;
     public bool IsWallJumping;
     public bool IsOnWall;
     Rigidbody2D rb;
+    bool doWallJump;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerMove = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        move = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(Speed * move, rb.velocity.y);
+        //move = Input.GetAxis("Horizontal");
+        //rb.velocity = new Vector2(Speed * move, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && IsOnWall == true)
-            rb.AddForce(new Vector2(rb.velocity.x + WJump, WJump));
+        {
+            playerMove.enabled = false;
+
+            StartCoroutine(TheJump(jumpDirection));
+        }
     }
+    IEnumerator TheJump(float direction)
+    {
+        rb.AddForce(new Vector2(direction * WJump, WJump), ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(1f);
+        playerMove.enabled = true;
+
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Wall"))
-        { 
-            IsWallJumping = false;
-            IsOnWall = true;
-        }
+     
+            if (other.gameObject.CompareTag("WallL"))
+            {
+                //  IsWallJumping = false;
+                IsOnWall = true;
+                jumpDirection = 1;
+            }
+            else if (other.gameObject.CompareTag("WallR"))
+            {
+                //  IsWallJumping = false;
+                IsOnWall = true;
+                jumpDirection = -1;
+            } 
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("WallL") || other.gameObject.CompareTag("WallR"))
         {
-            IsWallJumping = true;
+            // IsWallJumping = true;
             IsOnWall = false;
         }
     }
+    //attempt 3
+    /* public float WallJumpCoolDown;
+
+    public void FixedUpdate()
+    {
+        if (WallJumpCoolDown > 0.2f)
+        {
+            if (IsOnWall)
+            {
+                rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    WallJumpCoolDown = 0;
+                    rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * WJump, WJump);
+                }
+            }
+            else
+                rb.gravityScale = 1;
+        }
+        else
+            WallJumpCoolDown += Time.deltaTime;
+    }
+    */
+
+
+
 
 
     /*attempt 2
@@ -82,3 +133,4 @@ public class WallJump : MonoBehaviour
 
     //GetCompnent<DashMOve>().enabled = true;*/
 }
+// awwwww whyyyyyyyyyy?

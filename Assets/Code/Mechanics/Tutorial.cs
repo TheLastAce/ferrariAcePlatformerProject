@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class GameController : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
+    public TMP_Text TutorialText;
+    public GameObject TutorialCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            TutorialCanvas.SetActive(false);
+        }
     }
 }

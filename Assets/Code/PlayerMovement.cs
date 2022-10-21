@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float Jump;
     public bool IsJumping;
     Rigidbody2D rb;
+    public Vector2 MovementVector;
+    public float WallJumpOffset; 
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         move = Input.GetAxis("Horizontal");
+       // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
         rb.velocity = new Vector2(Speed * move, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && IsJumping == false)
