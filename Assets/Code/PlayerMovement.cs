@@ -11,7 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumping;
     Rigidbody2D rb;
     public Vector2 MovementVector;
-    public float WallJumpOffset; 
+    public float WallJumpOffset;
+    public bool DoJump;
+    public bool DoWallJump;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +26,20 @@ public class PlayerMovement : MonoBehaviour
     {
         move = Input.GetAxis("Horizontal");
        // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
-        rb.velocity = new Vector2(Speed * move, rb.velocity.y);
+        
 
         if (Input.GetButtonDown("Jump") && IsJumping == false)
+            DoJump = true;
+    }
+
+    public void FixedUpdate()
+    {
+        if (DoJump)
+        {
             rb.AddForce(new Vector2(rb.velocity.x, Jump));
+            DoJump = false;
+        }
+        rb.velocity = new Vector2(Speed * move, rb.velocity.y);
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
