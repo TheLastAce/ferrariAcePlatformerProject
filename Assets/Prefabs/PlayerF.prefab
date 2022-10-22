@@ -152,6 +152,15 @@ MonoBehaviour:
   Speed: 5
   Jump: 400
   IsJumping: 0
+  MovementVector: {x: 0, y: 0}
+  JumpDirection: 0
+  DoJump: 0
+  DoWallJump: 0
+  IsOnWall: 0
+  WallJumpTimer: 0
+  WallJumpTimerMax: 0
+  wallJumpForce: {x: 1, y: 1}
+  CanMove: 0
 --- !u!114 &4543232003223235586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234ccceb5aaaeed40bbff1593e9bd011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  WJump: 0
+  Speed: 5
+  WJump: 5
   IsWallJumping: 0
   IsOnWall: 0

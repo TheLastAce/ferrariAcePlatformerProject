@@ -25,7 +25,7 @@ public class WallJump : MonoBehaviour
     {
         if (doWallJump)
         {
-            rb.AddForce(new Vector2(jumpDirection * WJump, WJump), ForceMode2D.Impulse);
+           // rb.AddForce(new Vector2(jumpDirection * WJump, WJump), ForceMode2D.Impulse);
             doWallJump = false;
 
         }

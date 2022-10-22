@@ -159,7 +159,8 @@ MonoBehaviour:
   IsOnWall: 0
   WallJumpTimer: 0
   WallJumpTimerMax: 0.2
-  wallJumpForce: 2
+  wallJumpForce: {x: 1, y: 1}
+  CanMove: 0
 --- !u!114 &-3539062789330873853
 MonoBehaviour:
   m_ObjectHideFlags: 0

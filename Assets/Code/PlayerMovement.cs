@@ -17,12 +17,13 @@ public class PlayerMovement : MonoBehaviour
     public bool IsOnWall;
     public float WallJumpTimer;
     public float WallJumpTimerMax;
-    public float wallJumpForce;
+    public Vector2 wallJumpForce;
     public bool CanMove; 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        CanMove = true;
     }
 
     // Update is called once per frame
@@ -35,40 +36,31 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && IsOnWall == true && IsJumping)
         {
-            WallJumpTimer = WallJumpTimerMax; 
-        }
-        if(WallJumpTimer > 0)
-        {
-            CanMove = false;
-
-            WallJumpTimer -= Time.deltaTime;
-        }
-        else
-        {
-            CanMove = true;
-
+            DoWallJump = true;
         }
     }
     private void FixedUpdate()
     {
-        if (CanMove)
+        
+        if(DoWallJump)
         {
-            var xMove = (Speed * move);
-            rb.velocity = new Vector2(xMove, rb.velocity.y);
+                rb.AddForce(new Vector2(JumpDirection * wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);
+            DoWallJump = false;
         }
-        if (DoJump == true && IsJumping == false && IsOnWall == false)
+        else
         {
-            rb.AddForce(new Vector2(rb.velocity.x, Jump));
-            DoJump = false;
-            Debug.Log("Did jump");
+            if (CanMove)
+            {
+                var xMove = (Speed * move);
+                rb.velocity = new Vector2(xMove, rb.velocity.y);
+            }
+            if (DoJump == true && IsJumping == false && IsOnWall == false)
+            {
+                rb.AddForce(new Vector2(rb.velocity.x, Jump));
+                DoJump = false;
+                Debug.Log("Did jump");
+            }
         }
-        if(WallJumpTimer > 0)
-        {
-                rb.AddForce(new Vector2(JumpDirection * wallJumpForce, .1f), ForceMode2D.Impulse);
-
-
-        }
-       
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
