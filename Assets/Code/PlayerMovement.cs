@@ -11,7 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumping;
     Rigidbody2D rb;
     public Vector2 MovementVector;
-    public float WallJumpOffset; 
+    public float JumpDirection;
+    public bool DoJump;
+    public bool DoWallJump;
+    public bool IsOnWall;
+    public float WallJumpTimer;
+    public float WallJumpTimerMax;
+    public float wallJumpForce;
+    public bool CanMove; 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +29,46 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         move = Input.GetAxis("Horizontal");
-       // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
-        rb.velocity = new Vector2(Speed * move, rb.velocity.y);
-
         if (Input.GetButtonDown("Jump") && IsJumping == false)
+        {
+            DoJump = true; 
+        }
+        if (Input.GetButtonDown("Jump") && IsOnWall == true && IsJumping)
+        {
+            WallJumpTimer = WallJumpTimerMax; 
+        }
+        if(WallJumpTimer > 0)
+        {
+            CanMove = false;
+
+            WallJumpTimer -= Time.deltaTime;
+        }
+        else
+        {
+            CanMove = true;
+
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (CanMove)
+        {
+            var xMove = (Speed * move);
+            rb.velocity = new Vector2(xMove, rb.velocity.y);
+        }
+        if (DoJump == true && IsJumping == false && IsOnWall == false)
+        {
             rb.AddForce(new Vector2(rb.velocity.x, Jump));
+            DoJump = false;
+            Debug.Log("Did jump");
+        }
+        if(WallJumpTimer > 0)
+        {
+                rb.AddForce(new Vector2(JumpDirection * wallJumpForce, .1f), ForceMode2D.Impulse);
+
+
+        }
+       
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
