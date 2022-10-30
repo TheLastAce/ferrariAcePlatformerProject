@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float WallJumpOffset;
     public bool DoJump;
     public bool DoWallJump;
+    public float Distance;
+    public LayerMask GroundMask;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         move = Input.GetAxis("Horizontal");
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, Distance, GroundMask);
+        if(hit.transform != null)
+        {
+            IsJumping = false;
+        }
+        else
+        {
+            IsJumping = true;
+        }
        // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
         
 
@@ -43,12 +55,30 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
-            IsJumping = false;
+       // if (other.gameObject.CompareTag("Ground"))
+           // IsJumping = false;
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
-            IsJumping = true;
+       // if (other.gameObject.CompareTag("Ground"))
+            //IsJumping = true;
     }
 }
+/*
+ * gAME manager
+ * public static gamemanager instance;
+ * 
+ * if(instance == null
+ *  instance = this;
+ * else
+ *  destroy(gameObject);
+ * DontDestoryOnLoad(gameObject);
+ * 
+ * 
+ * 
+ * 
+ * gameManager.instance.var = x;
+ * 
+ * everytime you load a new scene everything is destroyed
+ * dontdestroyonload allows it to stay in the scene
+ * */

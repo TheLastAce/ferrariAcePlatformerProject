@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel1 : MonoBehaviour
 {
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+        player.GetComponent<DashMove>().enabled = true;
     }
 
     // Update is called once per frame

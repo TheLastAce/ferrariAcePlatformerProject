@@ -11,7 +11,7 @@ public class DashMove : MonoBehaviour
     float dashingTime = 0.2f;
     float dashingCooldown = 1f;
     public Rigidbody2D Rb;
-    public float DashDistance = 15f;
+    public float DashDistance = 7f;
     float doubleTapTime;
     KeyCode lastKeyCode;
 
@@ -40,6 +40,7 @@ public class DashMove : MonoBehaviour
     }
     IEnumerator Dash(float direction)
         {
+        canDash = false;
         playerMove.enabled = false;
         isDashing = true;
         Rb.velocity = new Vector2(Rb.velocity.x, 0f);
@@ -47,35 +48,37 @@ public class DashMove : MonoBehaviour
         float gravity = Rb.gravityScale;
         Rb.gravityScale = 0f;
         yield return new WaitForSeconds(0.5f);
-        isDashing = false;
         Rb.gravityScale = gravity;
         playerMove.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        isDashing = false;
+        canDash = true;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            if(doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
+            if(doubleTapTime > Time.time && lastKeyCode == KeyCode.A && canDash)
             {
                // print("Double A");
                 StartCoroutine(Dash(-1f));
             }
             else
             {
-                doubleTapTime = Time.time + 0.5f;
+                doubleTapTime = Time.time + 0.2f;
             }
             lastKeyCode = KeyCode.A;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
+            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D && canDash)
             {
                 StartCoroutine(Dash(1f));
             }
             else
             {
-                doubleTapTime = Time.time + 0.5f;
+                doubleTapTime = Time.time + 0.2f;
             }
             lastKeyCode = KeyCode.D;
         }
@@ -148,3 +151,5 @@ public class DashMove : MonoBehaviour
  } */
 
 }
+
+// getcomponent<DashMove>().enabled = true/false;

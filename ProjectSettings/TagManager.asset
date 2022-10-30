@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - WallR
   - WallL
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Groud
   - 
   - 
   - 
@@ -42,14 +43,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2080732007
     locked: 0
   - name: Gameplay
     uniqueID: 3052705549
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Foreground
     uniqueID: 2097602083

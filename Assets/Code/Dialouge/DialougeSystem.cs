@@ -30,14 +30,16 @@ public class DialougeSystem : MonoBehaviour
     }
     public void StopSpeaking()
     {
-        if (IsSpeaking == true)
+        if (Speaking != null)
         {
-            StopCoroutine(Speaking);
-        }
-        Speaking = null;
 
+            SpeakerNameText.text = "";
+            SpeechText.text = "";
+            StopCoroutine(Speaking);
+
+            Speaking = null;
+        }
     }
-    public bool IsSpeaking = false;
     /*if(Speaking != null)
         {
         IsSpeaking = true;
@@ -54,7 +56,7 @@ public class DialougeSystem : MonoBehaviour
         while (SpeechText.text != targetSpeech)
         {
             SpeechText.text += targetSpeech[SpeechText.text.Length];
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.05f);
         }
         IsWaitingForInput = true;
         while (IsWaitingForInput)

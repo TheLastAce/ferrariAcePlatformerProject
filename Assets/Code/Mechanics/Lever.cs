@@ -7,8 +7,8 @@ public class Lever : MonoBehaviour
     public GameObject Button;
     public GameObject Door;
     public GameObject ConnectedDoor;
-    public bool doorIsOpen;
-    public bool touchButton;
+    public bool DoorIsOpen;
+    public bool TouchButton;
 
 
     // Start is called before the first frame update
@@ -19,29 +19,29 @@ public class Lever : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        touchButton = true;
+        TouchButton = true;
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        touchButton = false;
+        TouchButton = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && touchButton == true)
+        if (Input.GetKeyDown(KeyCode.E) && TouchButton == true)
         {
-            if (doorIsOpen == false)
+            if (DoorIsOpen == false)
             {
                 Door.SetActive(false); //open door
                 ConnectedDoor.SetActive(true); //close connected
-                doorIsOpen = true; //set main door open
+                DoorIsOpen = true; //set main door open
             }
-            else if (doorIsOpen == true)
+            else if (DoorIsOpen == true)
             {
                 Door.SetActive(true);
                 ConnectedDoor.SetActive(false);
-                doorIsOpen = false;
+                DoorIsOpen = false;
             }
         }
     }

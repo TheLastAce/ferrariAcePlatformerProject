@@ -5,7 +5,7 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     DialougeSystem dialouge;
-    public DialougeMessage[] myMessages;
+    public DialougeMessage[] MyMessages;
 
     // Start is called before the first frame update
     void Start()
@@ -13,12 +13,6 @@ public class Test : MonoBehaviour
         dialouge = DialougeSystem.instance;
     }
 
-    public string[] s = new string[]
-    {
-        "hello:cat",
-        "I like to draw",
-        "cats"
-    };
 
     int i = 0;
     // Update is called once per frame
@@ -26,22 +20,20 @@ public class Test : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            if(!dialouge.IsSpeaking || dialouge.IsWaitingForInput)
-            {
-                if (i >= s.Length)
+          
+                if (i >= MyMessages.Length)
                 {
+                    //load scene
                     return;
                 }
-                //Say(myMessages[i]); // si senor
+                Say(MyMessages[i]); 
                 i++;
-            }
+            
         }
     }
     void Say(DialougeMessage message)
     {
-        
         dialouge.Say(message);
-
     }
 }
 

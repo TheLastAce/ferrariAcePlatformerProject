@@ -5,23 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelectII : MonoBehaviour
 {
-    public GameObject[] characters;
-    public int selectedCharacter = 0;
+    public GameObject[] Characters;
+    public int SelectedCharacter = 0;
 
     public void Male()
     {
-        selectedCharacter = 0;
-        characters[selectedCharacter].SetActive(true);
+        SelectedCharacter = 0;
+        Characters[SelectedCharacter].SetActive(true);
     }
 
     public void Female()
     {
-        selectedCharacter = 1;
-        characters[selectedCharacter].SetActive(true);
+        SelectedCharacter = 1;
+        Characters[SelectedCharacter].SetActive(true);
     }
     public void StartGame()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt("selectedCharacter", SelectedCharacter);
         SceneManager.LoadScene("level1");
     }
 }

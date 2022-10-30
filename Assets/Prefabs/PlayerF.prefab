@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 348244786130625759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.28, y: -3.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.67, y: 0.32, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,11 +76,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1242261747
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9433962, g: 0.7066572, b: 0.87846524, a: 1}
+  m_Sprite: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,18 +103,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.16893339, y: -0.60065174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.42439488, y: 0.58516777}
+    oldSize: {x: 2.15, y: 6.13}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0886812, y: 5.9553766}
   m_EdgeRadius: 0
 --- !u!50 &348244786130625757
 Rigidbody2D:
@@ -150,8 +150,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Jump: 400
+  Jump: 300
   IsJumping: 0
+  MovementVector: {x: 0, y: 0}
+  WallJumpOffset: 0
+  DoJump: 0
+  DoWallJump: 0
+  Distance: 1.24
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &4543232003223235586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,13 +167,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348244786130625759}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 500738ea0b946944b9162823a1feb53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rb: {fileID: 348244786130625757}
-  DashDistance: 15
+  DashDistance: 8
   tr: {fileID: 3296807436471760601}
 --- !u!96 &3296807436471760601
 TrailRenderer:
@@ -282,12 +290,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348244786130625759}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 234ccceb5aaaeed40bbff1593e9bd011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  WJump: 0
+  Speed: 5
+  WJumpx: 5
+  WJumpy: 7
   IsWallJumping: 0
   IsOnWall: 0

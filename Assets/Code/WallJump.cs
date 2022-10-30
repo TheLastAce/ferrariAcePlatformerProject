@@ -8,7 +8,8 @@ public class WallJump : MonoBehaviour
     private float jumpDirection;
 
     PlayerMovement playerMove;
-    public float WJump;
+    public float WJumpx;
+    public float WJumpy;
     public bool IsWallJumping;
     public bool IsOnWall;
     Rigidbody2D rb;
@@ -35,9 +36,9 @@ public class WallJump : MonoBehaviour
     }
     IEnumerator TheJump(float direction)
     {
-        rb.AddForce(new Vector2(direction * WJump, WJump), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(direction * WJumpx, WJumpy), ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         playerMove.enabled = true;
 
     }

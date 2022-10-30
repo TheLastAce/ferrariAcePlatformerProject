@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            TutorialCanvas.SetActive(false);
+            TutorialText.enabled = false;
         }
     }
 }
