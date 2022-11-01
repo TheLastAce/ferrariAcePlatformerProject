@@ -11,7 +11,7 @@ public class NextLevel1 : MonoBehaviour
     {
 
         player = FindObjectOfType<PlayerMovement>().gameObject;
-        player.GetComponent<DashMove>().enabled = true;
+        
     }
 
     // Update is called once per frame

@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 604159791}
   - component: {fileID: 604159793}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: LoadCharacter
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

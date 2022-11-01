@@ -7,10 +7,11 @@ public class GameController : MonoBehaviour
     public static GameController Gc;
     DialougeSystem dialougeSystem;
     Test testInstance;
+    public LevelController CurrentLevel;
 
     
 
-    public Vector3 CheckPointPos;
+    public Vector3 SpawnPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,9 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            Destroy(Gc);
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(Gc);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

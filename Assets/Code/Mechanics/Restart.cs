@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     public GameObject StartPoint;
-    public GameObject CheckPoint;
+   
     public GameObject Player;
 
     private GameController gc;
@@ -14,16 +14,18 @@ public class Restart : MonoBehaviour
     void Start()
     {
         LoadCharacter.PlayerSpawedEvent += HandlePlayerSpawnedEvent;
-        //player = FindObjectOfType<PlayerMovement>().gameObject;
-        gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        transform.position = gc.CheckPointPos;
+        Player = FindObjectOfType<PlayerMovement>().gameObject;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
-            Player.transform.position = StartPoint.transform.position;
+        {
+            print("R");
+            Player.transform.position = GameController.Gc.SpawnPos;
+        }
     }
 
    

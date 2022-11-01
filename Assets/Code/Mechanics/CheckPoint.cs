@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class CheckPoint : MonoBehaviour
 {
     private GameController gc;
@@ -14,9 +14,8 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            gc.CheckPointPos = transform.position;
+            gc.SpawnPos = transform.position;
             
         }
     }
 }
-*/

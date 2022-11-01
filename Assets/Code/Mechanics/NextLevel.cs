@@ -22,11 +22,12 @@ public class NextLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             SceneManager.LoadScene("level2");
+        
     }
     void PlayerSpawned(GameObject character)
     {
 
         player = character;
-        player.GetComponent<WallJump>().enabled = true;
+        
     }
 }

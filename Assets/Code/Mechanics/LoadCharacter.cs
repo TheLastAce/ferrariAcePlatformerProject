@@ -13,8 +13,8 @@ public class LoadCharacter : MonoBehaviour
     private void Start()
     {
         gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        if (gc.CheckPointPos != null)
-            SpawnPoint.position = gc.CheckPointPos;
+        if (gc.SpawnPos != null)
+            SpawnPoint.position = gc.SpawnPos;
         int SelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
         GameObject prefab = CharacterPrefabs[SelectedCharacter];
         GameObject clone = Instantiate(prefab, SpawnPoint.position, Quaternion.identity);

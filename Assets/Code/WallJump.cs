@@ -15,6 +15,10 @@ public class WallJump : MonoBehaviour
     Rigidbody2D rb;
     bool doWallJump;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        Debug.Log("work pls");
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

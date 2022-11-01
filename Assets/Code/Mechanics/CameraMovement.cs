@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     {
         LoadCharacter.PlayerSpawedEvent += HandlePlayerSpawnedEvent;
         
-        //player = FindObjectOfType<PlayerMovement>().gameObject;
+        Player = FindObjectOfType<PlayerMovement>().gameObject;
         // player = PlayerPrefs.GetString("selectedCharacter");
     }
 
