@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
 
     
 
-    public Vector2 CheckPointPos;
+    public Vector3 CheckPointPos;
     // Start is called before the first frame update
     void Start()
     {

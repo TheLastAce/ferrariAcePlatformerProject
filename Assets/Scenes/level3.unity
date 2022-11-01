@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762e84393f9e4dc489266f3c329d6896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointPos: {x: -7.4, y: 32.3}
+  CheckPointPos: {x: -7.4, y: 32.3, z: 0}
 --- !u!1 &647182916
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5407,10 @@ PrefabInstance:
     - target: {fileID: 348244786130625759, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882032163226326460, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4543232003223235586, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
       propertyPath: m_Enabled

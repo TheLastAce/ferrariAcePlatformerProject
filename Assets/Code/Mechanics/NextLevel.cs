@@ -9,8 +9,8 @@ public class NextLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>().gameObject;
-        player.GetComponent<WallJump>().enabled = true;
+        LoadCharacter.PlayerSpawedEvent += PlayerSpawned;
+       
     }
 
     // Update is called once per frame
@@ -22,5 +22,11 @@ public class NextLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             SceneManager.LoadScene("level2");
+    }
+    void PlayerSpawned(GameObject character)
+    {
+
+        player = character;
+        player.GetComponent<WallJump>().enabled = true;
     }
 }

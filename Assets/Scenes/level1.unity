@@ -2956,7 +2956,7 @@ PrefabInstance:
       objectReference: {fileID: 1673673486}
     - target: {fileID: -3539062789330873853, guid: 403175e11203ceb43bd90ee445c9cace, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3539062789330873853, guid: 403175e11203ceb43bd90ee445c9cace, type: 3}
       propertyPath: DashDistance
@@ -3040,7 +3040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2436016620188868372, guid: 403175e11203ceb43bd90ee445c9cace, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403175e11203ceb43bd90ee445c9cace, type: 3}
@@ -3147,7 +3147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855728130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.78, y: 11.94, z: -0.1452681}
+  m_LocalPosition: {x: -2.4, y: -4.9, z: -0.1452681}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5092,9 +5092,10 @@ GameObject:
   - component: {fileID: 1912483663}
   - component: {fileID: 1912483664}
   - component: {fileID: 1912483665}
+  - component: {fileID: 1912483666}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5112,7 +5113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 855728130}
-  CheckPoint: {fileID: 0}
+  CheckPoint: {fileID: 855728130}
   Player: {fileID: 338462140}
 --- !u!4 &1912483661
 Transform:
@@ -5122,7 +5123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912483659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.141937, y: 9.107332, z: -0.1452681}
+  m_LocalPosition: {x: 1.1, y: 25.7, z: -0.1452681}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5188,6 +5189,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialText: {fileID: 164667759}
   TutorialCanvas: {fileID: 976479180}
+--- !u!114 &1912483666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912483659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762e84393f9e4dc489266f3c329d6896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckPointPos: {x: -2, y: -3, z: 0}
 --- !u!1 &1942453371
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4543232003223235586, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4543232003223235586, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
       propertyPath: defaultDashSpeed
