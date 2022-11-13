@@ -17,7 +17,7 @@ public class WallJump : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        Debug.Log("work pls");
+        //Debug.Log("work pls");
     }
     void Start()
     {
@@ -42,7 +42,7 @@ public class WallJump : MonoBehaviour
     {
         rb.AddForce(new Vector2(direction * WJumpx, WJumpy), ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         playerMove.enabled = true;
 
     }

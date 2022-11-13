@@ -7,4 +7,7 @@ public class DialougeMessage
 {
     public string Message;
     public string Speaker;
+    public Sprite Maiden;
+    public Sprite HeroM;
+    public Sprite HeroF;
 }

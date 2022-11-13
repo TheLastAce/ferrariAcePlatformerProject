@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour
 {
     DialougeSystem dialouge;
     public DialougeMessage[] MyMessages;
 
+    
+    string sceneName;
+
     // Start is called before the first frame update
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
         dialouge = DialougeSystem.instance;
+        sceneName = currentScene.name;
     }
 
 
@@ -21,15 +27,25 @@ public class Test : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return))
         {
           
-                if (i >= MyMessages.Length)
+                if (i >= MyMessages.Length - 1)
                 {
-                    //load scene
-                    return;
+                if (sceneName == "level1")
+                {
+                    SceneManager.LoadScene("level2");
+                }
+                if (sceneName == "level2")
+                {
+                    SceneManager.LoadScene("level3");
+                }
+                //load scene
+                return;
                 }
                 Say(MyMessages[i]); 
                 i++;
             
         }
+        
+
     }
     void Say(DialougeMessage message)
     {

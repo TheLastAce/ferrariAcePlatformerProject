@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -3539062789330873853}
   - component: {fileID: 2436016620188868372}
   - component: {fileID: 5704019879162507798}
+  - component: {fileID: -5550308769865222984}
   m_Layer: 0
   m_Name: PlayerM
   m_TagString: Player
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 348244786130625759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.28, y: -3.39, z: 0}
-  m_LocalScale: {x: 0.67, y: 0.32, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -1242261747
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2146423045, guid: 68d7ad4a0a9d4064e9bb618de06435c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7691804bbe16a5c469ebefb89ec425b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,18 +104,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13172317, y: -0.55323696}
+  m_Offset: {x: 0.047847986, y: -0.026128411}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.42439488, y: 0.58516777}
-    oldSize: {x: 2.01, y: 6.13}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8957162, y: 6.2162323}
+  m_Size: {x: 0.119983196, y: 0.2168138}
   m_EdgeRadius: 0
 --- !u!50 &348244786130625757
 Rigidbody2D:
@@ -149,17 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a938a41d0a0709944a98a12aa13c00a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  Jump: 300
+  Speed: 2.25
+  Jump: 175
   IsJumping: 0
   MovementVector: {x: 0, y: 0}
   WallJumpOffset: 0
   DoJump: 0
   DoWallJump: 0
-  Distance: 1.25
+  Distance: 0.17
   GroundMask:
     serializedVersion: 2
     m_Bits: 64
+  LevelControllerInstance: {fileID: 0}
 --- !u!114 &-3539062789330873853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rb: {fileID: 348244786130625757}
-  DashDistance: 8
+  DashDistance: 4
   tr: {fileID: 5704019879162507798}
 --- !u!114 &2436016620188868372
 MonoBehaviour:
@@ -187,9 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234ccceb5aaaeed40bbff1593e9bd011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  WJumpx: 5
-  WJumpy: 7
+  Speed: 2.25
+  WJumpx: 2
+  WJumpy: 3
   IsWallJumping: 0
   IsOnWall: 0
 --- !u!96 &5704019879162507798
@@ -300,3 +302,23 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!95 &-5550308769865222984
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348244786130625759}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e24c222067206043bf7f775fec9e99e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

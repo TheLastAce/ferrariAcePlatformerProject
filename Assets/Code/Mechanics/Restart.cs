@@ -24,7 +24,8 @@ public class Restart : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             print("R");
-            Player.transform.position = GameController.Gc.SpawnPos;
+            //Player.transform.position = GameController.Gc.SpawnPos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

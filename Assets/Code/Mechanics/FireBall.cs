@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    float moveSpeed = 2f;
+    float moveSpeed = .25f;
     public GameObject CheckPoint;
     public GameObject Dragon;
     Rigidbody2D rb;
@@ -31,13 +31,22 @@ public class FireBall : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            Destroy(this);
             Target.transform.position = CheckPoint.transform.position;
-            Dragon.transform.position = new Vector3(0, 18.25f, 0);
+            Dragon.transform.position = new Vector3(-8.5f, -3.9f, 0);
+            var FireBalls = FindObjectsOfType<FireBall>();
+            //for loop fireballs[i] != this
+            for (int i = 0; i >= FireBalls.Length; i++)
+            {
+                if (FireBalls[i] != this)
+                {
+                    Destroy(FireBalls[i].gameObject);
+                }
+            }
+            Destroy(this.gameObject);
         }
         else if (collision.tag == "WallL" || collision.tag == "WallR") // remember to change so only when colliding with borders!
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DRAGON : MonoBehaviour
 {
     public Rigidbody2D Rb;
-    public float Speed  = 1f;
+    public float Speed  = .1f;
     public Transform ShootPoint;
     GameObject player;
     public GameObject CheckPoint;
@@ -35,7 +35,14 @@ public class DRAGON : MonoBehaviour
         {
             player = FindObjectOfType<PlayerMovement>().gameObject;
             player.transform.position = CheckPoint.transform.position;
-            transform.position = new Vector3(0, 18.25f, 0);
+            transform.position = new Vector3(-8.5f, -3.9f, 0);
+            var FireBalls = FindObjectsOfType<FireBall>();
+            //for loop fireballs[i] != this
+            for (int i = 0; i >= FireBalls.Length; i++)
+            {
+                Destroy(FireBalls[i].gameObject);
+            }
+            
             print("bonk");
         }
     }

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    public enum LevelState
+    {
+        tutorial, 
+        gameplay
+    }
+    public LevelState CurrentState;
     public Restart RestartInstance;
     public DialougeSystem DialougeSystemInstance;
     public LoadCharacter LoadCharacterInstance;

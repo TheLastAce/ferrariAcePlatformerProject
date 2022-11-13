@@ -44,4 +44,5 @@ public class CharacterManager : MonoBehaviour
 
         return newCharacter;
     }
-}*/
+}
+*/

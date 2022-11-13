@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
 public class NextLevel1 : MonoBehaviour
 {
     private GameObject player;
@@ -25,3 +25,4 @@ public class NextLevel1 : MonoBehaviour
             SceneManager.LoadScene("level3");
     }
 }
+*/

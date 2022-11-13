@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float Speed;
     float move;
-
+    public GameObject player;
     public float Jump;
     public bool IsJumping;
     Rigidbody2D rb;
@@ -16,32 +17,53 @@ public class PlayerMovement : MonoBehaviour
     public bool DoWallJump;
     public float Distance;
     public LayerMask GroundMask;
-    
+
+    public LevelController LevelControllerInstance;
+    string sceneName;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        LevelControllerInstance = FindObjectOfType<LevelController>();
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        move = Input.GetAxis("Horizontal");
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, Distance, GroundMask);
-        if(hit.transform != null)
+        if (LevelControllerInstance.CurrentState == LevelController.LevelState.gameplay)
         {
-            IsJumping = false;
-        }
-        else
-        {
-            IsJumping = true;
-        }
-       // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
-        
 
-        if (Input.GetButtonDown("Jump") && IsJumping == false)
-            DoJump = true;
+
+            move = Input.GetAxis("Horizontal");
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, Distance, GroundMask);
+            if (hit.transform != null)
+            {
+                IsJumping = false;
+            }
+            else
+            {
+                IsJumping = true;
+            }
+            // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
+
+
+            if (Input.GetButtonDown("Jump") && IsJumping == false)
+                DoJump = true;
+        }
+        if (sceneName == "level2")
+        {
+            player.GetComponent<WallJump>().enabled = true;
+        }
+        if (sceneName == "level3")
+        {
+            player.GetComponent<DashMove>().enabled = true;
+            player.GetComponent<WallJump>().enabled = true;
+        }
     }
 
     public void FixedUpdate()
