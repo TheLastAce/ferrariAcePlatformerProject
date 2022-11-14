@@ -9,6 +9,7 @@ TagManager:
   - WallR
   - WallL
   - CheckPoint
+  - FireBall
   layers:
   - Default
   - TransparentFX
