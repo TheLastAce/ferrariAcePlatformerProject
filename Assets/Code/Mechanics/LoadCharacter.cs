@@ -4,7 +4,7 @@ using UnityEngine;
 public class LoadCharacter : MonoBehaviour
 {
     public GameObject[] CharacterPrefabs;
-    public Vector3 SpawnPoint;
+    public Transform SpawnPoint;
     public static Action<GameObject> PlayerSpawedEvent;
 
     private GameController gc;
@@ -13,11 +13,11 @@ public class LoadCharacter : MonoBehaviour
     private void Start()
     {
         gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        //if (gc.SpawnPos != null)
-            //SpawnPoint = Camera.main.ScreenToWorldPoint(gc.SpawnPos);
+        if (gc.SpawnPos != null)
+            SpawnPoint.position = gc.SpawnPos;
         int SelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
         GameObject prefab = CharacterPrefabs[SelectedCharacter];
-        GameObject clone = Instantiate(prefab, SpawnPoint, Quaternion.identity);
+        GameObject clone = Instantiate(prefab, SpawnPoint.position, Quaternion.identity);
         clone.SetActive(true);
         PlayerSpawedEvent?.Invoke(clone);
         //label.text = prefab.name;

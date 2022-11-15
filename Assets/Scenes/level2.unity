@@ -1989,14 +1989,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1537234281}
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-      propertyPath: SpawnPoint.x
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-      propertyPath: SpawnPoint.y
-      value: -9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: CharacterPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 265354594}

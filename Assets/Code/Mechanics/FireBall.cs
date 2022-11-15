@@ -10,7 +10,6 @@ public class FireBall : MonoBehaviour
     Rigidbody2D rb;
     public GameObject Target;
     Vector2 moveDirection;
-    //public GameObject[] FireBalls;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +20,6 @@ public class FireBall : MonoBehaviour
         CheckPoint = GameObject.FindGameObjectWithTag("CheckPoint");
         moveDirection = (Target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        //FireBalls = GameObject.FindGameObjectsWithTag("FireBall");
         //Destroy(gameObject, 3f);
     }
    // public void HandlePlayerSpawnedEvent(GameObject chosenPlayer)
@@ -37,12 +35,10 @@ public class FireBall : MonoBehaviour
             Dragon.transform.position = new Vector3(-8.5f, -3.9f, 0);
             var FireBalls = FindObjectsOfType<FireBall>();
             //for loop fireballs[i] != this
-            for (int i = 0; i <= FireBalls.Length; i++)
+            for (int i = 0; i >= FireBalls.Length; i++)
             {
-                print(FireBalls.Length);
-                if (FireBalls[i] != this.gameObject)
+                if (FireBalls[i] != this)
                 {
-
                     Destroy(FireBalls[i].gameObject);
                 }
             }
@@ -52,9 +48,5 @@ public class FireBall : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    void DeleteFireBall()
-    {
-        Destroy(gameObject);
     }
 }

@@ -3027,7 +3027,7 @@ Transform:
   m_GameObject: {fileID: 855728130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.07, y: -4.87, z: -0.1453}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.27478644, y: 0.3315775, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5302,14 +5302,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 855728131}
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-      propertyPath: SpawnPoint.x
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-      propertyPath: SpawnPoint.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: CharacterPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 257615740}
@@ -5347,11 +5339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.69
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.96
+      value: 25.7
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.z
