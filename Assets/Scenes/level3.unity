@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Very Clever Name '
+  m_text: Sabreth
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2985,7 +2985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: words be like
+  m_text: So...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5731,7 +5731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].HeroF
@@ -5766,6 +5766,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[4].HeroF
+      value: 
+      objectReference: {fileID: -2146423045, guid: 68d7ad4a0a9d4064e9bb618de06435c4, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[4].HeroM
+      value: 
+      objectReference: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[5].HeroF
+      value: 
+      objectReference: {fileID: -2146423045, guid: 68d7ad4a0a9d4064e9bb618de06435c4, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[5].HeroM
+      value: 
+      objectReference: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].Maiden
       value: 
       objectReference: {fileID: 21300000, guid: 92c011f2ddbfe3d4ca716c5767b2cc0c, type: 3}
@@ -5782,36 +5798,60 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 92c011f2ddbfe3d4ca716c5767b2cc0c, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[4].Maiden
+      value: 
+      objectReference: {fileID: 21300000, guid: 92c011f2ddbfe3d4ca716c5767b2cc0c, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[5].Maiden
+      value: 
+      objectReference: {fileID: 21300000, guid: 92c011f2ddbfe3d4ca716c5767b2cc0c, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].Message
-      value: Wow you did it
+      value: Are YOU the princess?
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].Speaker
-      value: wassup
+      value: Sabreth
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[1].Message
-      value: honest opions?
+      value: Yeah probably
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[1].Speaker
-      value: gamer
+      value: Ophelia
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].Message
-      value: Its ok if you thought it was bad
+      value: :0
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].Speaker
-      value: gamer
+      value: Sabreth
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].Message
-      value: I hope it was a little fun though
+      value: OMG I did it!
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].Speaker
-      value: gaymer
+      value: Sabreth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[4].Message
+      value: I don't want to go out with you though
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[4].Speaker
+      value: Ophelia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[5].Message
+      value: Crying rn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: MyMessages.Array.data[5].Speaker
+      value: Sabreth
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: TutorialText
