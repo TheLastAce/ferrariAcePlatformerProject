@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2.25
+  player: {fileID: 0}
   Jump: 175
   IsJumping: 0
   MovementVector: {x: 0, y: 0}

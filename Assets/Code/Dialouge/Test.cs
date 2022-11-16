@@ -10,6 +10,7 @@ public class Test : MonoBehaviour
 
     
     string sceneName;
+    GameObject choicePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,14 @@ public class Test : MonoBehaviour
                 if (sceneName == "level2")
                 {
                     SceneManager.LoadScene("level3");
+                }
+                if (sceneName == "level3")
+                {
+                    SceneManager.LoadScene("end");
+                }
+                if (sceneName == "end")
+                {
+                    choicePanel.SetActive(true);
                 }
                 //load scene
                 return;
