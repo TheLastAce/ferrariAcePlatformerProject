@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool DoWallJump;
     public float Distance;
     public LayerMask GroundMask;
+    public Animator MyAnimator;
 
     public LevelController LevelControllerInstance;
     string sceneName;
@@ -37,23 +38,39 @@ public class PlayerMovement : MonoBehaviour
         if (LevelControllerInstance.CurrentState == LevelController.LevelState.gameplay)
         {
 
-
+           
             move = Input.GetAxis("Horizontal");
+            MyAnimator.SetFloat("Direction", move);
+            if (move != 0)
+            {
+                MyAnimator.SetBool("Walking", true);
+               
+            }
+            if (move == 0)
+            {
+                MyAnimator.SetBool("Walking", false);
 
+            }
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, Distance, GroundMask);
             if (hit.transform != null)
             {
                 IsJumping = false;
+                MyAnimator.SetBool("Jumping", false);
+
             }
             else
             {
                 IsJumping = true;
+                MyAnimator.SetBool("Jumping", true);
             }
             // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
 
 
             if (Input.GetButtonDown("Jump") && IsJumping == false)
+            {
                 DoJump = true;
+                MyAnimator.SetBool("Jumping", true);
+            }
         }
         if (sceneName == "level2")
         {

@@ -28,8 +28,12 @@ public class Test : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return))
         {
           
-                if (i >= MyMessages.Length - 1)
+                if (i >= MyMessages.Length)
                 {
+                if (sceneName == "Intro")
+                {
+                    SceneManager.LoadScene("level1");
+                }
                 if (sceneName == "level1")
                 {
                     SceneManager.LoadScene("level2");
@@ -44,7 +48,8 @@ public class Test : MonoBehaviour
                 }
                 if (sceneName == "end")
                 {
-                    choicePanel.SetActive(true);
+                    // choicePanel.SetActive(true);
+                    SceneManager.LoadScene(0);
                 }
                 //load scene
                 return;

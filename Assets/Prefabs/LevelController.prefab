@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 0}
-  CheckPoint: {fileID: 0}
   Player: {fileID: 0}
 --- !u!114 &3248403223366774112
 MonoBehaviour:
@@ -83,6 +82,8 @@ MonoBehaviour:
   SpeechPanel: {fileID: 0}
   SpeakerNameText: {fileID: 0}
   SpeechText: {fileID: 0}
+  Player: {fileID: 0}
+  Maiden: {fileID: 0}
   IsWaitingForInput: 0
 --- !u!114 &3248403223366774142
 MonoBehaviour:
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9cf37850bfd4e4e878aa5ccd8b7f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentState: 0
   RestartInstance: {fileID: 3248403223366774114}
   DialougeSystemInstance: {fileID: 3248403223366774113}
   LoadCharacterInstance: {fileID: 3248403223366774112}

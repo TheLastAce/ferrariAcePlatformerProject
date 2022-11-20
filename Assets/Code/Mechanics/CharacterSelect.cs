@@ -29,7 +29,7 @@ public class CharacterSelect : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("SelectedCharacter", SelectedCharacter);
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene("Intro");
     }
 }
 /*

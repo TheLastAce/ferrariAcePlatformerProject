@@ -653,6 +653,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656485108}
   m_CullTransparentMesh: 1
+--- !u!1 &729682512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729682513}
+  m_Layer: 0
+  m_Name: start point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729682513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729682512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.88089687, z: 0.010539262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &759225581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,15 +1685,11 @@ PrefabInstance:
     - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-      propertyPath: CheckPoint
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1342453399}
     - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: StartPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 729682512}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1771,7 +1798,6 @@ PrefabInstance:
     - {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
     - {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
     - {fileID: 3248403223366774113, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
-    - {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
     - {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
 --- !u!1 &1961607304 stripped

@@ -27,6 +27,13 @@ public class Restart : MonoBehaviour
             //Player.transform.position = GameController.Gc.SpawnPos;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        if (Input.GetKey(KeyCode.Escape))
+
+        {
+
+            Application.Quit();
+
+        }
     }
 
    

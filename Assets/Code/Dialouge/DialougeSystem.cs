@@ -11,8 +11,8 @@ public class DialougeSystem : MonoBehaviour
     public TMP_Text SpeakerNameText;
     public TMP_Text SpeechText;
 
-   // public Image Player;
-    //public Image Maiden;
+    public Image Player;
+    public Image Maiden;
 
     public bool IsWaitingForInput = false;
     Coroutine Speaking = null;
@@ -28,8 +28,18 @@ public class DialougeSystem : MonoBehaviour
     }
     public void Say(DialougeMessage message)
     {
-       // Player.sprite = message.HeroM; // check player pref
-        //Maiden.sprite = message.Maiden;
+        var playerCharcater = PlayerPrefs.GetInt("SelectedCharacter");
+        if (playerCharcater == 0)
+        {
+
+
+            Player.sprite = message.HeroM; // check player pref
+        }
+        else if (playerCharcater == 1)
+        {
+            Player.sprite = message.HeroF;
+        }
+        Maiden.sprite = message.Maiden;
         StopSpeaking();
         Speaking = StartCoroutine(speaking(message.Message, message.Speaker));
     }

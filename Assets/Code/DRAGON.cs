@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DRAGON : MonoBehaviour
 {
     public Rigidbody2D Rb;
-    public float Speed  = .1f;
+    public float Speed = .1f;
     public Transform ShootPoint;
     GameObject player;
     public GameObject CheckPoint;
@@ -26,9 +23,9 @@ public class DRAGON : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckIfTimeToFire();
+        //CheckIfTimeToFire();
     }
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -42,19 +39,19 @@ public class DRAGON : MonoBehaviour
             {
                 Destroy(FireBalls[i].gameObject);
             }
-            
+
             print("bonk");
         }
     }
 
     void CheckIfTimeToFire()
     {
-        if(Time.time > nextFire)
-        {
-            Instantiate(FireBall, ShootPoint.position, Quaternion.identity);
-            nextFire = Time.time + fireRate;
-            
-        }
+        // if(Time.time > nextFire)
+
+        Instantiate(FireBall, ShootPoint.position, Quaternion.identity);
+        //nextFire = Time.time + fireRate;
+
+
     }
 
     /* psuedocode gang
