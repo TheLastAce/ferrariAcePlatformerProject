@@ -6,7 +6,7 @@ public class LoadCharacter : MonoBehaviour
     public GameObject[] CharacterPrefabs;
     public Transform SpawnPoint;
     public static Action<GameObject> PlayerSpawedEvent;
-
+    public Vector3 StartCords;
     private GameController gc;
     //public TMP_Text label;
 

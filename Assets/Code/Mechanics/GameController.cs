@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        SpawnPos.Set(0, 0, 0);
     }
 
     // Update is called once per frame
