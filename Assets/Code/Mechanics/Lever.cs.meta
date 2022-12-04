@@ -3,7 +3,11 @@ guid: 783856047cbf36143bb178ca6b617e36
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Button: {instanceID: 0}
+  - Door: {instanceID: 0}
+  - ConnectedDoor: {instanceID: 0}
+  - Click: {fileID: 8300000, guid: 5401676e4e428614c986009c6ed1dadf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

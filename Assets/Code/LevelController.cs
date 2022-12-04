@@ -7,7 +7,8 @@ public class LevelController : MonoBehaviour
     public enum LevelState
     {
         tutorial, 
-        gameplay
+        gameplay,
+        dialogue
     }
     public LevelState CurrentState;
     public Restart RestartInstance;

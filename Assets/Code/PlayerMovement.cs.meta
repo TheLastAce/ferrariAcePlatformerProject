@@ -3,7 +3,12 @@ guid: a938a41d0a0709944a98a12aa13c00a3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - MyAnimator: {instanceID: 0}
+  - JumpBounce: {fileID: 8300000, guid: 7233ea5940f5c7f4dbebc5d75cfb36d7, type: 3}
+  - Land: {fileID: 8300000, guid: b52a5761659ec92469d85a6f7279b73e, type: 3}
+  - LevelControllerInstance: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -2004,7 +2004,7 @@ PrefabInstance:
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: SpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2015933947}
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: SpawnPoint.x
       value: -9
@@ -2016,11 +2016,11 @@ PrefabInstance:
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: CharacterPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 348244786130625759, guid: 403175e11203ceb43bd90ee445c9cace, type: 3}
     - target: {fileID: 3248403223366774112, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: CharacterPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 348244786130625759, guid: 22d20364205b0454596e08a3e4a4db9f, type: 3}
     - target: {fileID: 3248403223366774113, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: Maiden
       value: 
@@ -2029,6 +2029,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1798285403}
+    - target: {fileID: 3248403223366774113, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: PlayerF
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ee709696c8d1d342bafe598b446a951, type: 3}
+    - target: {fileID: 3248403223366774113, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: PlayerM
+      value: 
+      objectReference: {fileID: 21300000, guid: 506de5aa01bb49d4aadedb43a5e03e23, type: 3}
     - target: {fileID: 3248403223366774113, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2048,7 +2056,7 @@ PrefabInstance:
     - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2015933944}
     - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2056,18 +2064,18 @@ PrefabInstance:
     - target: {fileID: 3248403223366774114, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: StartPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2015933944}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1
+      value: 402
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.7
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774115, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2110,21 +2118,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: Click
+      value: 
+      objectReference: {fileID: 8300000, guid: 105101a933c2dcf47a65fb1d4a0701f1, type: 3}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 568796083}
+    - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].HeroF
       value: 
-      objectReference: {fileID: 21300000, guid: 0ee709696c8d1d342bafe598b446a951, type: 3}
+      objectReference: {fileID: 21300000, guid: f066531ccf0d44745914711a05bb1c0f, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[0].HeroM
       value: 
-      objectReference: {fileID: 21300000, guid: 506de5aa01bb49d4aadedb43a5e03e23, type: 3}
+      objectReference: {fileID: 21300000, guid: 9874fe69353077b47a755674990b5955, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[1].HeroF
       value: 
@@ -2144,19 +2160,19 @@ PrefabInstance:
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].HeroF
       value: 
-      objectReference: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
+      objectReference: {fileID: 21300000, guid: c2b0da75002b4b9488b00b069c6a99e6, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].HeroM
       value: 
-      objectReference: {fileID: -2146423045, guid: 68d7ad4a0a9d4064e9bb618de06435c4, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a8fb442c23b77846b260ab168807f53, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[4].HeroF
       value: 
-      objectReference: {fileID: -2146423045, guid: 9ed97d69074da37478d3e56d9bb84dac, type: 3}
+      objectReference: {fileID: 21300000, guid: 08d8c34a5b0165b40a23ea786eca3d07, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[4].HeroM
       value: 
-      objectReference: {fileID: -2146423045, guid: 68d7ad4a0a9d4064e9bb618de06435c4, type: 3}
+      objectReference: {fileID: 21300000, guid: cdf397e676243eb40b707dde8ebdcbb2, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[5].HeroF
       value: 
@@ -2188,11 +2204,11 @@ PrefabInstance:
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].Maiden
       value: 
-      objectReference: {fileID: 21300000, guid: 6ba533eeaa280c248b403693ecc29a88, type: 3}
+      objectReference: {fileID: 21300000, guid: 009af124ffbd5ab46b70a94c72de1c36, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[4].Maiden
       value: 
-      objectReference: {fileID: 21300000, guid: f2591702c7acda3469d8c573669464c1, type: 3}
+      objectReference: {fileID: 21300000, guid: 009af124ffbd5ab46b70a94c72de1c36, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[5].Maiden
       value: 
@@ -2219,7 +2235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].Message
-      value: What will you do next?
+      value: What will you do now?
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].Speaker
@@ -2227,19 +2243,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].Message
-      value: yay thank you
+      value: You still have...
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].Speaker
-      value: Solis
+      value: King
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[4].Message
-      value: Let's get out of here
+      value: No Maidens
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[4].Speaker
-      value: Sabreth
+      value: King
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[5].Message
@@ -2271,10 +2287,111 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6507112833637505219, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: CurrentState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+--- !u!1 &568796082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248403223366774117, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+  m_PrefabInstance: {fileID: 568796081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &568796083
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568796082}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 61.24165
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &675633591
 GameObject:
   m_ObjectHideFlags: 0

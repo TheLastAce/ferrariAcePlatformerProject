@@ -11,12 +11,18 @@ public class DRAGON : MonoBehaviour
     public GameObject FireBall;
     float fireRate;
     float nextFire;
+
+    public AudioClip Die;
+    public AudioClip Fire;
+    public AudioClip Roar;
+    public AudioClip Roar2;
+    public AudioSource Dragon;
     // Start is called before the first frame update
     void Start()
     {
         Rb.velocity = new Vector2(Rb.velocity.x, Speed * 1);
 
-        fireRate = 5f;
+        fireRate = 3f;
         nextFire = Time.time;
     }
 
@@ -30,6 +36,8 @@ public class DRAGON : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Dragon.PlayOneShot(Die);
+
             player = FindObjectOfType<PlayerMovement>().gameObject;
             player.transform.position = CheckPoint.transform.position;
             transform.position = new Vector3(-8.5f, -3.9f, 0);
@@ -49,10 +57,20 @@ public class DRAGON : MonoBehaviour
         // if(Time.time > nextFire)
 
         Instantiate(FireBall, ShootPoint.position, Quaternion.identity);
+        Dragon.PlayOneShot(Fire);
+
         //nextFire = Time.time + fireRate;
 
 
     }
+    public void PlaySound(AudioClip Clip)
+    {
+        Dragon.PlayOneShot(Clip);
+    }
+    // public void PlayShootSound(AudioClip ShootClip)
+    //{
+    //  Dragon.PlayOneShot(ShootClip);
+    //}
 
     /* psuedocode gang
      Dragon attack class

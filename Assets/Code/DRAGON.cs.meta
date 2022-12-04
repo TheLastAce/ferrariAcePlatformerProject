@@ -3,7 +3,13 @@ guid: fab609310faf07d40b42c298c55a27d8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Rb: {instanceID: 0}
+  - ShootPoint: {instanceID: 0}
+  - CheckPoint: {instanceID: 0}
+  - FireBall: {instanceID: 0}
+  - Die: {fileID: 8300000, guid: 0877589c49e9ffd439153d0c624907d2, type: 3}
+  - Fire: {fileID: 8300000, guid: e5895d67aca25a24591ac451d494375c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

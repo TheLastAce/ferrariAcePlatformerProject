@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +6,12 @@ public class Test : MonoBehaviour
     DialougeSystem dialouge;
     public DialougeMessage[] MyMessages;
 
-    
+
     string sceneName;
     GameObject choicePanel;
 
+    public AudioSource Level;
+    public AudioClip Click;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,40 +25,44 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (GameController.Gc.CurrentLevel.CurrentState == LevelController.LevelState.dialogue)
         {
-          
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+
                 if (i >= MyMessages.Length)
                 {
-                if (sceneName == "Intro")
-                {
-                    SceneManager.LoadScene("level1");
+                    if (sceneName == "Intro")
+                    {
+                        SceneManager.LoadScene("level1");
+                    }
+                    if (sceneName == "level1")
+                    {
+                        SceneManager.LoadScene("level2");
+                    }
+                    if (sceneName == "level2")
+                    {
+                        SceneManager.LoadScene("level3");
+                    }
+                    if (sceneName == "level3")
+                    {
+                        SceneManager.LoadScene("end");
+                    }
+                    if (sceneName == "End")
+                    {
+                        // choicePanel.SetActive(true);
+                        SceneManager.LoadScene(0);
+                    }
+                    //load scene
+                    return;
                 }
-                if (sceneName == "level1")
-                {
-                    SceneManager.LoadScene("level2");
-                }
-                if (sceneName == "level2")
-                {
-                    SceneManager.LoadScene("level3");
-                }
-                if (sceneName == "level3")
-                {
-                    SceneManager.LoadScene("end");
-                }
-                if (sceneName == "end")
-                {
-                    // choicePanel.SetActive(true);
-                    SceneManager.LoadScene(0);
-                }
-                //load scene
-                return;
-                }
-                Say(MyMessages[i]); 
+                Say(MyMessages[i]);
+                Level.PlayOneShot(Click);
                 i++;
-            
+
+            }
         }
-        
+
 
     }
     void Say(DialougeMessage message)

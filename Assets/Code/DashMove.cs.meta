@@ -3,7 +3,10 @@ guid: 500738ea0b946944b9162823a1feb53f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Rb: {instanceID: 0}
+  - tr: {instanceID: 0}
+  - Woosh: {fileID: 8300000, guid: b34f097d94c05944aa4c7e5dccd73a52, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

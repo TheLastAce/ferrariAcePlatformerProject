@@ -187,8 +187,9 @@ MonoBehaviour:
   Button: {fileID: 5116619210640161858}
   Door: {fileID: 5116619210400775628}
   ConnectedDoor: {fileID: 5116619211295397433}
-  doorIsOpen: 0
-  touchButton: 0
+  DoorIsOpen: 0
+  TouchButton: 0
+  Click: {fileID: 8300000, guid: 5401676e4e428614c986009c6ed1dadf, type: 3}
 --- !u!58 &5116619210640161886
 CircleCollider2D:
   m_ObjectHideFlags: 0

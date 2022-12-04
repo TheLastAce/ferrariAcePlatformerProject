@@ -16,6 +16,11 @@ public class DialougeSystem : MonoBehaviour
 
     public bool IsWaitingForInput = false;
     Coroutine Speaking = null;
+
+    public Sprite PlayerM;
+    public Sprite PlayerF;
+
+   
     private void Awake()
     {
         instance = this;
@@ -24,7 +29,17 @@ public class DialougeSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var playerCharcater = PlayerPrefs.GetInt("SelectedCharacter");
+        if (playerCharcater == 0)
+        {
 
+
+            Player.sprite = PlayerM; // check player pref
+        }
+        else if (playerCharcater == 1)
+        {
+            Player.sprite = PlayerF;
+        }
     }
     public void Say(DialougeMessage message)
     {
@@ -71,7 +86,7 @@ public class DialougeSystem : MonoBehaviour
         while (SpeechText.text != targetSpeech)
         {
             SpeechText.text += targetSpeech[SpeechText.text.Length];
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForSeconds(.01f);
         }
         IsWaitingForInput = true;
         while (IsWaitingForInput)

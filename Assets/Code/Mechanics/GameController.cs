@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     Test testInstance;
     public LevelController CurrentLevel;
 
-    
+    public AudioSource Music;
 
     public Vector3 SpawnPos;
     // Start is called before the first frame update

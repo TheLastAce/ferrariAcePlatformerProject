@@ -10,6 +10,8 @@ public class Lever : MonoBehaviour
     public bool DoorIsOpen;
     public bool TouchButton;
 
+    public AudioClip Click;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,8 @@ public class Lever : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && TouchButton == true)
         {
+            AudioSource.PlayClipAtPoint(Click, Camera.main.transform.position);
+
             if (DoorIsOpen == false)
             {
                 Door.SetActive(false); //open door

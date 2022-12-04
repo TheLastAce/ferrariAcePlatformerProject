@@ -16,6 +16,8 @@ public class DashMove : MonoBehaviour
     KeyCode lastKeyCode;
 
     public TrailRenderer tr;
+    public AudioClip Woosh;
+    public AudioSource Player;
 
     /* private IEnumerator DashTr()
      {
@@ -40,6 +42,8 @@ public class DashMove : MonoBehaviour
     }
     IEnumerator Dash(float direction)
         {
+        Player.PlayOneShot(Woosh);
+        tr.emitting = true;
         canDash = false;
         playerMove.enabled = false;
         isDashing = true;
@@ -52,6 +56,7 @@ public class DashMove : MonoBehaviour
         playerMove.enabled = true;
         yield return new WaitForSeconds(0.5f);
         isDashing = false;
+        tr.emitting = false;
         canDash = true;
     }
 
@@ -70,6 +75,19 @@ public class DashMove : MonoBehaviour
             }
             lastKeyCode = KeyCode.A;
         }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.LeftArrow && canDash)
+            {
+                // print("Double A");
+                StartCoroutine(Dash(-1f));
+            }
+            else
+            {
+                doubleTapTime = Time.time + 0.2f;
+            }
+            lastKeyCode = KeyCode.LeftArrow;
+        }
         if (Input.GetKeyDown(KeyCode.D))
         {
             if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D && canDash)
@@ -82,10 +100,23 @@ public class DashMove : MonoBehaviour
             }
             lastKeyCode = KeyCode.D;
         }
-       /* if (isDashing)
-            return;
-        if (Input.GetKeyDown(KeyCode.Return) && canDash)
-            StartCoroutine(DashTr());*/
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.RightArrow && canDash)
+            {
+                // print("Double A");
+                StartCoroutine(Dash(1f));
+            }
+            else
+            {
+                doubleTapTime = Time.time + 0.2f;
+            }
+            lastKeyCode = KeyCode.RightArrow;
+        }
+        /* if (isDashing)
+             return;
+         if (Input.GetKeyDown(KeyCode.Return) && canDash)
+             StartCoroutine(DashTr());*/
     }
     private void FixedUpdate()
     {

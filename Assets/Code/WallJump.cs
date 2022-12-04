@@ -14,6 +14,9 @@ public class WallJump : MonoBehaviour
     public bool IsOnWall;
     Rigidbody2D rb;
     bool doWallJump;
+
+    public AudioClip JumpBounce;
+    public AudioSource Player;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -41,7 +44,7 @@ public class WallJump : MonoBehaviour
     IEnumerator TheJump(float direction)
     {
         rb.AddForce(new Vector2(direction * WJumpx, WJumpy), ForceMode2D.Impulse);
-
+        Player.PlayOneShot(JumpBounce);
         yield return new WaitForSeconds(.25f);
         playerMove.enabled = true;
 

@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundMask;
     public Animator MyAnimator;
 
+    public AudioClip JumpBounce;
+    public AudioClip Land;
+    public AudioClip DeathSound;
+    public AudioSource Player;
+
+
     public LevelController LevelControllerInstance;
     string sceneName;
 
@@ -40,7 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
            
             move = Input.GetAxis("Horizontal");
+            //if move == get last keycode
             MyAnimator.SetFloat("Direction", move);
+            MyAnimator.SetFloat("VerticalVelocity", rb.velocity.y);
             if (move != 0)
             {
                 MyAnimator.SetBool("Walking", true);
@@ -54,14 +62,20 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, Distance, GroundMask);
             if (hit.transform != null)
             {
-                IsJumping = false;
-                MyAnimator.SetBool("Jumping", false);
+                if (IsJumping == true)
+                {
 
+                    IsJumping = false;
+                    MyAnimator.SetBool("Jumping", false);
+                    Player.PlayOneShot(Land);
+                    // AudioSource.PlayClipAtPoint(Land, Camera.main.transform.position);
+                }
             }
             else
             {
                 IsJumping = true;
                 MyAnimator.SetBool("Jumping", true);
+               // AudioSource.PlayClipAtPoint(JumpBounce, Camera.main.transform.position);
             }
             // MovementVector = new Vector2 ((Speed * move) + WallJumpOffset, rb.velocity.y);
 
@@ -70,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 DoJump = true;
                 MyAnimator.SetBool("Jumping", true);
+               
             }
         }
         if (sceneName == "level2")
@@ -81,8 +96,16 @@ public class PlayerMovement : MonoBehaviour
             player.GetComponent<DashMove>().enabled = true;
             player.GetComponent<WallJump>().enabled = true;
         }
-    }
+        else if(LevelControllerInstance.CurrentState == LevelController.LevelState.tutorial)
+        {
 
+        }
+        else if (LevelControllerInstance.CurrentState == LevelController.LevelState.dialogue)
+        {
+
+        }
+    }
+   
     public void FixedUpdate()
     {
         if (DoJump)
@@ -101,6 +124,11 @@ public class PlayerMovement : MonoBehaviour
     {
        // if (other.gameObject.CompareTag("Ground"))
             //IsJumping = true;
+    }
+
+    public void PlaySound(AudioClip Clip)
+    {
+        Player.PlayOneShot(Clip);
     }
 }
 /*

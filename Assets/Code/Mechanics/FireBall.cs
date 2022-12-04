@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    float moveSpeed = .5f;
+    float moveSpeed = 1f;
     public GameObject CheckPoint;
     public GameObject Dragon;
     Rigidbody2D rb;
-    public GameObject Target;
+    public PlayerMovement Target;
     Vector2 moveDirection;
     // Start is called before the first frame update
     void Start()
     {
         //Target = chosenPlayer;
         rb = GetComponent<Rigidbody2D>();
-        Target = FindObjectOfType<PlayerMovement>().gameObject;
+        Target = FindObjectOfType<PlayerMovement>();
         Dragon = FindObjectOfType<DRAGON>().gameObject;
         CheckPoint = GameObject.FindGameObjectWithTag("CheckPoint");
         moveDirection = (Target.transform.position - transform.position).normalized * moveSpeed;
@@ -32,6 +32,7 @@ public class FireBall : MonoBehaviour
         if(collision.tag == "Player")
         {
             Target.transform.position = CheckPoint.transform.position;
+            Target.PlaySound(Target.DeathSound);
             Dragon.transform.position = new Vector3(-8.5f, -3.9f, 0);
             var FireBalls = FindObjectsOfType<FireBall>();
             //for loop fireballs[i] != this
