@@ -33,7 +33,7 @@ public class FireBall : MonoBehaviour
         {
             Target.transform.position = CheckPoint.transform.position;
             Target.PlaySound(Target.DeathSound);
-            Dragon.transform.position = new Vector3(-8.5f, -3.9f, 0);
+            Dragon.transform.position = new Vector3(.57f, 3.75f, 0);
             var FireBalls = FindObjectsOfType<FireBall>();
             //for loop fireballs[i] != this
             for (int i = 0; i >= FireBalls.Length; i++)

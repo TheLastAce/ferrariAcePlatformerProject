@@ -8,16 +8,19 @@ public class Test : MonoBehaviour
 
 
     string sceneName;
-    GameObject choicePanel;
+    public GameObject ChoicePanel;
 
     public AudioSource Level;
     public AudioClip Click;
+    public bool InEnding;
+
     // Start is called before the first frame update
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         dialouge = DialougeSystem.instance;
         sceneName = currentScene.name;
+        var playerCharcater = PlayerPrefs.GetInt("SelectedCharacter");
     }
 
 
@@ -48,9 +51,16 @@ public class Test : MonoBehaviour
                     {
                         SceneManager.LoadScene("end");
                     }
-                    if (sceneName == "End")
+                    if (sceneName == "End" && InEnding == false)
                     {
-                        // choicePanel.SetActive(true);
+                         ChoicePanel.SetActive(true);
+                        //SceneManager.LoadScene(0);
+                        dialouge.SpeechPanel.transform.parent.transform.parent.gameObject.SetActive(false);//turrn of king 
+                        gameObject.SetActive(false); //turn off king levelcontroller
+
+                    }
+                    if (sceneName == "End" && InEnding == true)
+                    {
                         SceneManager.LoadScene(0);
                     }
                     //load scene

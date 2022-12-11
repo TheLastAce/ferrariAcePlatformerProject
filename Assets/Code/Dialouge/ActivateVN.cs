@@ -29,6 +29,7 @@ public class ActivateVN : MonoBehaviour
         {
             VNRoot.SetActive(true);
             Dragon = FindObjectOfType<DRAGON>().gameObject;
+            Destroy(other.gameObject);
             GameController.Gc.CurrentLevel.CurrentState = LevelController.LevelState.dialogue;
             //dialougeSystem.enabled = true;
             // testInstance.enabled = true;

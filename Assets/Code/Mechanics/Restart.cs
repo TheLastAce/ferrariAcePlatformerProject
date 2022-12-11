@@ -34,6 +34,21 @@ public class Restart : MonoBehaviour
             Application.Quit();
 
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            print("2");
+            SceneManager.LoadScene("level2");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            print("3");
+            SceneManager.LoadScene("level3");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            print("4");
+            SceneManager.LoadScene("End");
+        }
     }
 
    

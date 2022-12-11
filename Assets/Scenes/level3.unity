@@ -578,7 +578,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3837065472dcb54193ea061a35b4da3, type: 3}
   m_Color: {r: 0.8207547, g: 0.80836594, b: 0.80836594, a: 1}
@@ -1306,7 +1306,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3837065472dcb54193ea061a35b4da3, type: 3}
   m_Color: {r: 0.8207547, g: 0.80836594, b: 0.80836594, a: 1}
@@ -2462,7 +2462,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2097602083
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d12b16cb6b6d0d4e8eb168594db26ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2483,7 +2483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653070191}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.21, y: -3.14, z: 0}
+  m_LocalPosition: {x: 0.77, y: 5.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3419,7 +3419,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3837065472dcb54193ea061a35b4da3, type: 3}
   m_Color: {r: 0.8207547, g: 0.80836594, b: 0.80836594, a: 1}
@@ -3485,6 +3485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialText: {fileID: 808734487}
   TutorialCanvas: {fileID: 1312706449}
+  Prompt: {fileID: 0}
+  PromptCanvas: {fileID: 0}
 --- !u!114 &808734487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,9 +3507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Double tap direction to dash
-
-    (Don''t spam, it''s bugged)'
+  m_text: Press "Enter" to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3570,7 +3570,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -237.38864, y: 0, z: -243.2864, w: -64.8764}
+  m_margin: {x: 2.8868408, y: 0, z: 0.6294862, w: -64.8764}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5104,7 +5104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1312706450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5857,7 +5857,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3837065472dcb54193ea061a35b4da3, type: 3}
   m_Color: {r: 0.8207547, g: 0.80836594, b: 0.80836594, a: 1}
@@ -6542,11 +6542,11 @@ PrefabInstance:
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].HeroF
       value: 
-      objectReference: {fileID: 21300000, guid: 0ee709696c8d1d342bafe598b446a951, type: 3}
+      objectReference: {fileID: 21300000, guid: d6dae6c52022f1b46917ce21d0d5cea1, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[2].HeroM
       value: 
-      objectReference: {fileID: 21300000, guid: 506de5aa01bb49d4aadedb43a5e03e23, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d32333268a8f354f8a14e718a79cab2, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[3].HeroF
       value: 
@@ -6642,11 +6642,11 @@ PrefabInstance:
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[14].HeroF
       value: 
-      objectReference: {fileID: 21300000, guid: c2b0da75002b4b9488b00b069c6a99e6, type: 3}
+      objectReference: {fileID: 21300000, guid: d6dae6c52022f1b46917ce21d0d5cea1, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[14].HeroM
       value: 
-      objectReference: {fileID: 21300000, guid: 9a8fb442c23b77846b260ab168807f53, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d32333268a8f354f8a14e718a79cab2, type: 3}
     - target: {fileID: 3248403223366774142, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: MyMessages.Array.data[15].HeroF
       value: 
@@ -7044,9 +7044,17 @@ PrefabInstance:
       value: Sabreth
       objectReference: {fileID: 0}
     - target: {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: Prompt
+      value: 
+      objectReference: {fileID: 808734487}
+    - target: {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
+      propertyPath: PromptCanvas
+      value: 
+      objectReference: {fileID: 1312706449}
     - target: {fileID: 3248403223366774143, guid: 2d810f4a24e5e334b83b788fa1e69fa4, type: 3}
       propertyPath: TutorialText
       value: 
@@ -7464,7 +7472,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 03e610d8e947a2a4a8f663f7004070b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7961,7 +7969,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2080732007
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3837065472dcb54193ea061a35b4da3, type: 3}
   m_Color: {r: 0.8207547, g: 0.80836594, b: 0.80836594, a: 1}
@@ -8428,7 +8436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126174307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -3.9, z: 0}
+  m_LocalPosition: {x: 0.57, y: 3.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

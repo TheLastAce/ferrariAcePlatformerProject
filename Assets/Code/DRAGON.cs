@@ -40,7 +40,7 @@ public class DRAGON : MonoBehaviour
 
             player = FindObjectOfType<PlayerMovement>().gameObject;
             player.transform.position = CheckPoint.transform.position;
-            transform.position = new Vector3(-8.5f, -3.9f, 0);
+            transform.position = new Vector3(.57f, 3.75f, 0);
             var FireBalls = FindObjectsOfType<FireBall>();
             //for loop fireballs[i] != this
             for (int i = 0; i >= FireBalls.Length; i++)
